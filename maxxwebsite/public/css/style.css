@@ -1,0 +1,32 @@
+.head {
+    justify-content: space-between;
+    padding: 1rem 5rem; 
+}
+
+#text1 {
+    font-size: 50px;
+    margin-left: rem;
+}
+
+.nav a {
+    font-size: x-large;
+}
+
+.logo img {
+    width: 50px; 
+    margin-left: 3rem;
+}
+
+.contact {
+    margin-right: 5rem;
+    margin-top: 2rem;
+}
+
+.contact button {
+    font-size: x-large;
+    padding: 1rem 2rem;
+}
+
+.contact a {
+    font-size: x-large;
+}

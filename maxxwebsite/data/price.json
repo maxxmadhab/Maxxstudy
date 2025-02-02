@@ -1,0 +1,49 @@
+{
+    "header": {
+        "logo": {
+            "src": "images/studylogo.webp",
+            "alt": "logo",
+            "width": "50cm",
+            "height": "50cm",
+            "text": "Maxxstudy"
+        },
+        "navigation": [
+            {"text": "Home", "href": "studysync.html"},
+            {"text": "Features", "href": "featurespage.html"},
+            {"text": "Pricing", "href": "price.html"},
+            {"text": "About", "href": "aboutpage.html"}
+        ],
+        "contact": {
+            "email": "madhabpadhi72@gmail.com"
+        }
+    },
+    "pricing": {
+        "header": "Choose Your Plan",
+        "plans": [
+            {
+                "title": "Free",
+                "price": "₹0/month",
+                "features": [
+                    "Access to basic course reviews",
+                    "Submit up to 3 reviews per month",
+                    "Basic community support"
+                ],
+                "buttonText": "Get Started",
+                "buttonLink": "login.html"
+            },
+            {
+                "title": "Premium",
+                "price": "₹200/month",
+                "features": [
+                    "Unlimited course reviews",
+                    "Priority review submissions", 
+                    "Access to premium courses and ratings",
+                    "24/7 support and guidance",
+                    "Exclusive content and updates"
+                ],
+                "buttonText": "Upgrade Now",
+                "buttonLink": "login.html"
+            }
+        ]
+    }
+}

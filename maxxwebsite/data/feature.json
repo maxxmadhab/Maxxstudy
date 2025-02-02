@@ -1,0 +1,89 @@
+{
+    "cards": [
+      {
+        "id": "card1",
+        "img": {
+          "src": "images/PersonalizedLearn.svg",
+          "alt": "imh",
+          "height": "40px",
+          "width": "40px"
+        },
+        "feature": {
+          "id": "feature1",
+          "name": "Personalized Learning"
+        },
+        "featureDescription": "Offer critical mentorship and 24/7 availability by AI and machine learning."
+      },
+      {
+        "id": "card2",
+        "img": {
+          "src": "images/Affordability.svg",
+          "alt": "imh",
+          "height": "40px",
+          "width": "40px"
+        },
+        "feature": {
+          "id": "feature2",
+          "name": "Affordability"
+        },
+        "featureDescription": "Provide quality content with affordable price so every child can take advantage of this amazing course."
+      },
+      {
+        "id": "card3",
+        "img": {
+          "src": "images/IndustryPatner.svg",
+          "alt": "img",
+          "height": "40px",
+          "width": "40px"
+        },
+        "feature": {
+          "id": "feature3",
+          "name": "Industry Partnership"
+        },
+        "featureDescription": "Partnership with various MNCs to provide ample placement opportunity after completion of course."
+      },
+      {
+        "id": "card4",
+        "img": {
+          "src": "images/InnovativeTech.svg",
+          "alt": "img",
+          "height": "40px",
+          "width": "40px"
+        },
+        "feature": {
+          "id": "feature4",
+          "name": "Innovative Technology"
+        },
+        "featureDescription": "Using cutting-edge AI tools and machine learning algorithms, we provide great learning growth."
+      },
+      {
+        "id": "card5",
+        "img": {
+          "src": "images/call.svg",
+          "alt": "img",
+          "height": "40px",
+          "width": "40px"
+        },
+        "feature": {
+          "id": "feature5",
+          "name": "Responsive Support"
+        },
+        "featureDescription": "Hearing each and every problem of every student is our top priority, and solving them is our main goal."
+      },
+      {
+        "id": "card6",
+        "img": {
+          "src": "images/Analytics.svg",
+          "alt": "img",
+          "height": "40px",
+          "width": "40px"
+        },
+        "feature": {
+          "id": "feature6",
+          "name": "Analytics and Insights"
+        },
+        "featureDescription": "We keep track of every student and their advancement to help them improve faster."
+      }
+    ]
+  }
+  

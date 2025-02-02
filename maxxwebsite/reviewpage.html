@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/study.css">
+    <script src="js/feature.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <img src="images/studylogo.webp" alt="logo" width="50cm" height="50cm">
+            <span id="text1">Maxxstudy</span>
+        </div>
+        <div class="nav">
+            <p><a href="studysync.html">Home</a></p>
+            <p><a href="featurespage.html">Features</a></p>
+            <p><a href="price.html">Pricing</a></p>
+            <p><a href="aboutpage.html">About</a></p>
+        </div>
+        <div class="contact">
+            <button><a href="mailto:madhabpadhi72@gmail.com">Contact us</a></button>
+        </div>
+    </div>
+
+    <div id="reviewFormContainer">
+        <form id="reviewForm" onsubmit="return submitReview(event)">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label for="profilePic">Profile Picture URL</label>
+                <input type="url" id="profilePic" name="profilePic" required>
+            </div>
+            <div class="form-field">
+                <label for="experience">Experience</label>
+                <textarea id="experience" name="experience" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <div class="achievement-counter">
+        <h2>Our Achievements</h2>
+        <div class="counter-container">
+            <div id="reviewCounter" class="counter" data-target="1500">0</div>
+            <p>Reviews</p>
+        </div>
+        <div class="counter-container">
+            <div class="counter" data-target="300">200</div>
+            <p>Courses</p>
+        </div>
+        <div class="counter-container">
+            <div class="counter" data-target="120">80</div>
+            <p>Instructors</p>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        © 2021 - Present StudySync. All rights reserved.
+    </div>
+</body>
+
+
+<script>
+    // Function to handle form submission
+    function submitReview(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  const formData = new FormData(document.getElementById('reviewForm')); // Collect form data
+  const data = {};
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+  console.log(data);  // Log the form data to check if it's correct
+
+  fetch('/api/reviews', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message); // Display success message
+      document.getElementById('reviewForm').reset(); // Reset the form
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('An error occurred while submitting the review.');
+    });
+}
+
+  </script>
+  
+
+
+</html>

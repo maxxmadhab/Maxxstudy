@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/study.css">
+    <title>about</title>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <img src="images/studylogo.webp" alt="logo" width="50cm" height="50cm">
+            <span id="text1">Maxxstudy</span>
+        </div>
+        <div class="nav">
+            <p><a href="studysync.html">Home</a></p>
+            <p><a href="featurespage.html">Features</a></p>
+            <p><a href="price.html">Pricing</a></p>
+            <p><a href="aboutpage.html">About</a></p>
+        </div>
+        <div class="contact">
+            <button><a href="mailto:madhabpadhi72@gmail.com">Contact us</a></button>
+        </div>
+    </div>
+
+    <h2>new reviews:</h2>
+
+    <div id="reviewsContainer" class="reviews-container">
+        <!-- Review boxes will be displayed below this point -->
+    </div>
+
+    <div class="page4">
+        <div class="news">
+            <div class="imh">
+                <img src="images/newsimg.jpg" alt="img" height="300px" width="300px">
+            </div>
+            <div class="form">
+                <h1 id="head4">Get the latest updates</h1>
+                <p id="para4">Signup for the news letter</p>
+                <form class="email">
+                    <input type="email" id="inputemail" placeholder="Email" required>
+                    <input type="submit" value="Submit">
+                    <p>By signing up you are agreeing to our <a href="#">terms</a> and <a href="#">Conditions</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="page5">
+        <footer>
+            <div class="leftfooter">
+                <div class="logo">
+                    <img src="images/studylogo.webp" alt="img" width="45cm" height="45cm">
+                    <p>Maxxstudy</p>
+                </div>
+                <p id="para5">Seamless learning for a better future</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/madhabpadhi_/"><img src="images/instagram.svg" alt=""></a>
+                    <a href="https://github.com/maxxmadhab/webdevcollege"><img src="images/github.svg" alt=""></a>
+                    <a href="https://x.com/home"><img src="images/twitter.svg" alt=""></a>
+                    <a href="https://www.linkedin.com/"><img src="images/linkedin-copy.svg" alt=""></a>
+                </div>
+            </div>
+
+            <div class="rightfooter">
+                <div class="row1">
+                    <h2>Products</h2>
+                    <div class="list">
+                        <p>Overview</p>
+                        <p>Solution</p>
+                        <p>Pricing</p>
+                        <p>Customer</p>
+                    </div>
+                </div>
+                <div class="row2">
+                    <h2>Company</h2>
+                    <div class="list">
+                        <p>About</p>
+                        <p>Job</p>
+                        <p>Press</p>
+                        <p>Blog</p>
+                        <p>Investor</p>
+                    </div>
+                </div>
+                <div class="row3">
+                    <h2>Support</h2>
+                    <div class="list">
+                        <p>Contact</p>
+                        <p>Documentation</p>
+                        <p>Chat</p>
+                        <p>FAQ</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="footer-copyright">
+        © 2021 - Present StudySync. All rights reserved.
+    </div>
+
+    <script>
+        // Fetch the review data from the backend and dynamically generate the review boxes
+        window.onload = async function() {
+            try {
+                // Fetch the reviews from the server
+                const response = await fetch('/api/reviews');
+                const reviews = await response.json();
+    
+                // Get the container where the review boxes will be placed
+                const reviewsContainer = document.getElementById('reviewsContainer');
+    
+                // Loop through the reviews and create a box for each review
+                reviews.forEach(review => {
+                    const reviewBox = document.createElement('div');
+                    reviewBox.classList.add('review-box');
+    
+                    // Add styling for review box
+                    reviewBox.style.border = '1px solid #ddd';
+                    reviewBox.style.padding = '15px';
+                    reviewBox.style.margin = '10px 0';
+                    reviewBox.style.borderRadius = '8px';
+                    reviewBox.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                    reviewBox.style.backgroundColor = '#fff';
+                    reviewBox.style.display = 'flex';
+                    reviewBox.style.flexDirection = 'column';
+                    reviewBox.style.maxWidth = '500px';
+                    reviewBox.style.marginLeft = 'auto';
+                    reviewBox.style.marginRight = 'auto';
+    
+                    // Add content to the review box
+                    reviewBox.innerHTML = `
+                        <div class="review-row" style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="${review.profilePic}" alt="${review.name}" width="100" height="100" style="border-radius: 50%; margin-right: 15px;">
+                            <span style="font-size: 18px; font-weight: bold;">${review.name}</span>
+                        </div>
+                        <div class="review-row" style="margin-top: 10px;">
+                            <p style="font-size: 16px; line-height: 1.5;">${review.experience}</p>
+                        </div>
+                    `;
+    
+                    // Append the created review box to the container
+                    reviewsContainer.appendChild(reviewBox);
+                });
+            } catch (error) {
+                console.error('Error fetching reviews:', error);
+                alert('An error occurred while fetching reviews.');
+            }
+        };
+    </script>
+    
+</body>
+
+</html>

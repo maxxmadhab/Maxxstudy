@@ -1,0 +1,663 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#text1 {
+    font-size: 40px; 
+    font-weight: 1000;
+    margin-left: 1rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.nav a {
+    font-weight: 300;
+    font-size: large; 
+    text-decoration: none;
+    color: rgb(49, 40, 40);
+}
+
+.nav p {
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+.logo img {
+    margin-top: 1rem;
+    margin-left: 2rem; 
+    width: 50px;
+    height: 50px; 
+}
+
+.logo span {
+    margin-top: 2rem;
+    font-size: large; 
+}
+
+.contact {
+    margin-right: 2rem; 
+    margin-top: 1rem;
+    background-color: #0a2351;
+    padding: 0.5rem; 
+    border-radius: 0.3rem;
+}
+
+.contact button {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #0a2351;
+    color: aliceblue;
+    padding: 0.8rem 1.5rem;
+    font-size: large; 
+}
+
+.contact a {
+    font-size: large;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+@media (min-width: 780px) {
+    .head {
+        justify-content: space-between;
+        padding: 1rem 5rem; 
+    }
+
+    #text1 {
+        font-size: 50px;
+        margin-left: rem;
+    }
+
+    .nav a {
+        font-size: x-large;
+    }
+
+    .logo img {
+        width: 50px; 
+        margin-left: 3rem;
+    }
+
+    .contact {
+        margin-right: 5rem;
+        margin-top: 2rem;
+    }
+
+    .contact button {
+        font-size: x-large;
+        padding: 1rem 2rem;
+    }
+
+    .contact a {
+        font-size: x-large;
+    }
+}
+
+
+.container1{
+   
+    display:flex;
+    flex-direction: column;
+
+}
+#flowimg{
+    border-radius: 1cm;
+    margin: 2 rem;
+  
+}
+
+@media(min-width:780px)
+{
+    
+    .container1{
+        display:flex;
+        flex-direction: row;
+        border: none;
+        border-radius: 1rem;
+        margin: 2rem;
+        margin-top: 4rem;
+    }
+    #flowimg{
+        border-radius: 1cm;
+        margin: 2 rem;
+        margin-left: 20rem;
+    }
+}
+
+
+
+
+.button{
+    margin-top: 2rem;
+}
+.button a {
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    margin: 1rem;
+}
+
+#button1 {
+    background-color: #0a2351;
+    color: aliceblue;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+#button2 {
+    background-color: #2c2d2e;
+    color: aliceblue;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+.para1{
+    animation:slideleft 1s ease forwards;
+}
+@keyframes slideleft{
+
+    0%{
+        opacity:0;
+        transform:translate(-100%);
+    }
+
+    100%{
+        opacity:1;
+        transform:translatex(0);
+    }
+}
+.companies{
+    display:grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 10rem;
+    margin-top: 2rem;
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+
+
+}
+.comp{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2rem;
+    font-weight: 300;
+    font-size: larger;
+}
+.comp span{
+    margin-top: 1.5rem;
+}
+#head1{
+
+    font-size: xx-large;
+    font-weight: 300;
+}
+@media(min-width:780px)
+{
+    .companies{
+       display: flex;
+       flex-direction: row;
+        border: solid black 1px;
+        justify-content: space-evenly;
+        margin: 10rem;
+        margin-top: 2rem;
+    
+    }
+    .comp{
+        flex-direction: row;
+    }
+    #head1{
+        margin-left: 35rem;
+        margin-right: 35rem;
+         font-size: xx-large;
+         font-weight: 600;
+     }
+}
+.page2{
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.cards {
+    margin: 3rem auto;
+    max-width: 1200px; /* Centering and limiting width */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    height: 200px;
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 0.8rem;
+}
+
+.imgcard {
+    display: flex;
+    border-radius: 2rem;
+    margin: 5px auto; 
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 150px; 
+}
+
+.feature {
+    padding: 10px;
+    font-size: larger;
+    font-weight: 300;
+}
+
+.feature-description {
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#head2 {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+#para2 {
+    text-align: center;
+    font-size: larger;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+
+#card1 { background-color: rgb(80, 80, 197); color: white; }
+#card2 { background-color: rgb(209, 39, 110); color: white; }
+#card3 { background-color: rgb(185, 201, 16); color: white; }
+#card4 { background-color: rgb(80, 80, 197); color: white; }
+#card5 { background-color: rgb(80, 80, 197); color: white; }
+#card6 { background-color: rgb(80, 80, 197); color: white; }
+
+
+#feature1, #feature2, #feature3, #feature4, #feature5, #feature6 {
+    text-align: center;
+}
+@media(min-width:780px)
+{
+    .cards{
+        margin: 3rem;
+        margin-left: 15rem;
+        margin-right: 10rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .page2{
+        background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    }
+    #head2{
+        margin-left: 33rem;
+        margin-right: 30rem;
+        font-size: xx-large;
+        font-weight: 600;
+    
+    }
+    #para2{
+        margin-left: 28rem;
+        margin-right: 30rem;
+        font-size: larger;
+        font-weight: 200;
+    
+    }
+    
+}
+
+
+/* Ensure the swiper container is positioned relatively for positioning buttons */
+.swiper-container {
+    position: relative; /* This is crucial for positioning buttons inside the container */
+    padding: 20px 0;
+}
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;  /* Absolutely position them */
+    top: 50%;             /* Vertically center them */
+    transform: translateY(-50%); /* Adjust to truly center */
+    z-index: 10;         /* Ensure the buttons are above content */
+    background-color: rgba(0, 0, 0, 0.5); /* Background for better visibility */
+    color: white;        /* White icon color */
+    padding: 10px;       /* Padding for the buttons */
+    border-radius: 50%;  /* Make the buttons circular */
+    font-size: 18px;     /* Adjust size of the icons */
+}
+
+/* Position the Next button */
+.swiper-button-next {
+    right: 10px;         /* Place it towards the right */
+}
+
+/* Position the Prev button */
+.swiper-button-prev {
+    left: 10px;          /* Place it towards the left */
+}
+
+/* Adjusting button visibility on mobile */
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 14px;  /* Reduce icon size on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#head3{
+    margin-left: 40rem;
+    margin-right: 35rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.interview{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 3rem;
+    padding: 20px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.photo{
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+
+.people{
+    border: none;
+    border-radius: 0.6rem;
+    box-shadow: 5px 5px rgb(125, 116, 116);
+    transition: transform 0.3s ease;
+    background-color: #fffae0;
+    padding: 20px; /* Added padding for consistent spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside the card */
+    justify-content: space-between; /* Ensure content is spaced evenly */
+    height: 300px; /* Set a consistent height */
+    width: 250px; /* Set a consistent width */
+    text-align: center; /* Center text inside the card */
+}
+
+.people:hover{
+    transform: scale(1.08);
+}
+
+.people p{
+    color: rgb(87, 87, 197);
+    font-weight: 300;
+    padding: 5px; /* Adjust padding to keep text spacing consistent */
+}
+
+.news{
+    display:flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
+
+.imh{
+    border-radius: 0.8rem;
+}
+
+.form{
+    padding: 20px;
+    background-color: rgb(139, 139, 139);
+}
+
+#head4{
+    font-size: xx-large;
+    font-weight: 900;
+    color: #134298;
+}
+
+@media(min-width:780px){
+    .news{
+        display: flex;
+        flex-direction: row;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        padding: 10rem;
+    }
+
+    .interview{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+        gap: 3rem;
+        padding: 20px;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    /* Ensure the cards maintain consistent size */
+    .people {
+        height: 320px;  /* Slightly taller cards for larger screens */
+        width: 270px;   /* Slightly wider cards for larger screens */
+    }
+
+    .form{
+        padding: 20px;
+        background-color: rgb(139, 139, 139);
+        width: 800px;
+    }
+
+    .people:hover{
+        transform: scale(1.08);
+    }
+}
+
+.page5 footer{
+    display: flex;
+    flex-direction:row;
+}
+
+
+.logo{
+    display: flex;
+    flex-direction:row;
+}
+.logo p{
+    font-weight: 600;
+    font-size: xx-large;
+    
+}
+.logo img{
+    margin-top: 30px;
+}
+#para5{
+    margin: 0;
+    padding: 0;
+    margin-left: 3rem;
+}
+.social{
+    margin-left: 3rem;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.social a{
+    padding: 10px;
+
+}
+.page5 footer{
+    display: flex;
+    flex-direction:row;
+}
+.rightfooter {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+.row1{
+    margin-left: 8rem;
+    margin-top: 4rem;
+}
+.row2{
+    margin-left: 2rem;
+    margin-top: 4rem;
+}
+.row3{
+    margin-left: 2rem;
+    margin-top: 4rem;
+}
+.footer-copyright{
+    color: rgb(71, 71, 71);
+    font-size: 0.75rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid #E5E7EB;
+    margin-left: 8rem;
+}
+
+
+
+.swiper-button-next{
+    background-color:white;
+    color: #2c2d2e;
+}
+
+.swiper-button-prev{
+    background-color: white;
+}
+  
+/* 
+reviewpage */
+/* Container for the review form */
+#reviewFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #8b8c8d;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form fields within the container */
+#reviewFormContainer .form-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#reviewFormContainer label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#reviewFormContainer input[type="text"],
+#reviewFormContainer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #f3f0f0;
+    border-radius: 5px;
+}
+
+#reviewFormContainer input[type="file"] {
+    margin-top: 10px;
+}
+
+#reviewFormContainer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reviewFormContainer button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* about page achivement counter */
+
+.achievement-counter {
+    text-align: center;
+    margin: 50px 0;
+}
+.counter-container {
+    display: inline-block;
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.counter {
+    color: #3498db;
+}
